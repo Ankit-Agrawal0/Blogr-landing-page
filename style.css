@@ -9,7 +9,7 @@
   width: 100vw;
   overflow: hidden;
 }
-input{
+input {
   display: none;
 }
 /* HEADER */
@@ -29,8 +29,8 @@ input{
   text-break: break;
   width: 90%;
 }
-.head .logo,.head .hamburger , .close{
-  z-index:5;
+.head .logo,.head .hamburger , .close {
+  z-index: 5;
   height: 40px;
   width: auto;
   background-color: transparent;
@@ -39,7 +39,7 @@ input{
   left: 10px;
   transition: all 0.5s linear;
 }
-.dropdown{
+.dropdown {
   height: 0;
   overflow: hidden;
   visibility: hidden;
@@ -61,7 +61,7 @@ input{
   align-items: center;
   box-shadow: 0 0 20px gray;
 }
-.drop1, .drop2, .drop3{
+.drop1, .drop2, .drop3 {
   display: none;
   list-style-type: none;
   background-color: #e0e0e0;
@@ -70,17 +70,17 @@ input{
   width: 80%;
   transition: all 0.5s linear;
 }
-.d1,.d2,.d3{
+.d1,.d2,.d3 {
   margin-top: 10px;
 }
-.head nav ul li{
+.head nav ul li {
   color: hsl(237, 17%, 21%);
   font-weight: 600;
 }
-.head nav ul ul li{
+.head nav ul ul li {
   margin: 5px;
 }
-.d1::after,.d2::after,.d3::after{
+.d1::after,.d2::after,.d3::after {
   content: "^";
   transform: rotate(180deg) translateY(-50%) translateX(-30%);
   position: absolute;
@@ -88,65 +88,65 @@ input{
   color: red;
   width: 10px;
 }
-.head #check:checked ~ nav .dropdown{
+.head #check:checked ~ nav .dropdown {
   visibility: visible;
   opacity: 1;
   height: auto;
 }
-.head #check:checked ~ label .close{
+.head #check:checked ~ label .close {
   display: block;
   transition: all 0.5s linear;
 }
-.head #check:checked ~ label .hamburger{
+.head #check:checked ~ label .hamburger {
   display: none;
 }
-.head nav #product:checked ~ .drop1{
-  height:auto;
+.head nav #product:checked ~ .drop1 {
+  height: auto;
   display: grid;
   place-items: center;
   opacity: 1;
   transition: all 0.5s linear;
 }
-.head nav #company:checked ~ .drop2{
-  height:auto;
+.head nav #company:checked ~ .drop2 {
+  height: auto;
   display: grid;
   place-items: center;
   opacity: 1;
   transition: all 0.5s linear;
 }
-.head nav #connect:checked ~ .drop3{
-  height:auto;
+.head nav #connect:checked ~ .drop3 {
+  height: auto;
   display: grid;
   place-items: center;
   opacity: 1;
   transition: all 0.5s linear;
 }
-.head nav ul a{
+.head nav ul a {
   text-decoration: none;
   color: rgb(44,45,63);
   font-weight: 600;
   margin-top: 10px;
 }
-.head nav ul a:last-child{
+.head nav ul a:last-child {
   padding: 8px 10px;
   border-radius: 20px;
   color: white;
   margin-bottom: 10px;
   background: linear-gradient(hsl(13, 100%, 72%),hsl(353, 100%, 62%));
 }
-hr{
+hr {
   width: 80%;
   color: #f6f5f585;
   margin: 15px auto 5px auto;
 }
-.head .hamburger,.close{
+.head .hamburger,.close {
   float: right;
   left: 80%;
   width: 40px;
   height: 30px;
   top: 15px;
 }
-.close{
+.close {
   display: none;
 }
 .head .bg {
@@ -180,17 +180,17 @@ hr{
   background-color: white;
   color: hsl(353, 100%, 62%);
 }
-.head .links a:first-child:hover{
+.head .links a:first-child:hover {
   background-color: hsl(13, 100%, 72%);
   border: 3px solid hsl(13, 100%, 72%);
   color: white;
 }
-.head .links a:last-child:hover{
-	background-color: white;
+.head .links a:last-child:hover {
+  background-color: white;
   color: hsl(353, 100%, 62%);
 }
 /* BODY */
-.middle div,.up, .down, .middle,.footer,.head{
+.middle div,.up, .down, .middle,.footer,.head, .footer .footerDiv {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -215,6 +215,9 @@ h1 {
   width: 350px;
   transform: translateY(22%);
   z-index: 3;
+}
+#desktop{
+  display: none;
 }
 .up .heading1 {
   width: 100%;
@@ -259,6 +262,9 @@ h1 {
 .down {
   transform: translateY(-5%);
 }
+.down .content div p{
+  width: 70%;
+}
 /* FOOTER */
 .footer {
   background-color: rgb(37,37,45);
@@ -271,12 +277,12 @@ h1 {
   margin: 5px;
 }
 .footer .dark {
-  margin: 40px;
+  margin: 30px;
   font-weight: 700;
   color: white;
 }
 .footer img {
-  margin: 15px;
+  margin: 20px;
 }
 .attribution {
   margin-top: 30px;
@@ -286,50 +292,111 @@ h1 {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
-@media (min-width:375px){
-  .hamburger{
+@media (min-width:375px) {
+  .hamburger {
     display: none;
   }
-  .dropdown{
+  .dropdown {
     visibility: visible;
     opacity: 1;
     height: auto;
-    align-items:flex-start;    
+    align-items: flex-start;
     background: transparent;
     overflow: visible;
-    justify-content:space-around;
+    justify-content: space-around;
     display: flex;
     flex-direction: row;
     box-shadow: none;
     top: 20px;
     left: 450px;
-    width:30%;
+    width: 30%;
   }
-  .dropdow  *{
+  .dropdow  * {
     color: white;
   }
-  hr{
+  hr {
     display: none;
   }
-  .drop1,.drop2,.drop3{
+  .drop1,.drop2,.drop3 {
     display: block;
     transform: translateX(-50%) translateY(30%);
     margin: 0;
-    
     background: white;
     box-shadow: 0 0 20px #80808041;
   }
-  .d1,.d2,.d3{
+  .d1,.d2,.d3 {
+    margin: 0 !important;
+  }
+  .head nav ul a {
+    position: absolute;
+    padding: 8px 30px;
+    right: -270px;
+    top: -15px;
+    width: auto;
+  }
+  .head nav ul a:last-child {
+    right: -350px;
+  }
+  .footer{
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .footer .footerDiv{
+    align-items: flex-start;
+  }
+  .dark{
+    margin-left: 0 !important;
+  }
+  .attribution{
+    display: none;
+  }
+  .content{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-around !important;
+  }
+  .content div p, .content div h1{
+    text-align: left;
+    align-self: flex-start;
+    width: 100% !important;
+    text-overflow: visible;
+  }
+  .content div{
+  			transform:  translateX(30%);
+  			width: 50vw;
+  			margin: 0 !important;
+  }
+ .down .content{
+  		 flex-direction: row;
+  }
+ .down .content div{
+   transform: translateX(-40%);
+ }
+  #mobile{
+    display: none;
+  }
+  #desktop{
+    display: block;
+  }
+  .content img{
+    position: relative;
     margin: 0;
+    right: -150px;
+    height: 700px !important;
   }
-  .head nav ul a{
-          position: absolute;
-  				padding: 8px 30px;
-  				right:-270px;
-  				top: -15px;
-  				width: auto;
+  .down .content img{
+    left: -150px;
+    height: 600px;
   }
-    .head nav ul a:last-child{
-    		right:-350px;
-    }
+/*  .down{
+    flex-direction: row;
+  }
+  .down img{
+    position: relative;
+    margin: 0 !important;
+    height: 600px !important;
+    left: -200px;
+  }*/
 }
